@@ -1,6 +1,7 @@
 import {
 	createContext,
 	createSignal,
+	createSelector,
 	PropsWithChildren as Props,
 	Show,
 	useContext,
@@ -73,12 +74,24 @@ import {
 	const Context = createContext<Store>()
 
 	function Store(){
-		const [activeTab, set_ActiveTab] = createSignal<string>()
+		const [activeTab, set_ActiveTab] = createSignal("")
+
+		/*
+		* vite-plugin-solid:  works
+		* solid-start:        throws exception
+		*/
+		const is_ActiveTab = createSelector(activeTab)
+
+		/*
+		* vite-plugin-solid:  works
+		* solid-start:        works
+		*/
+		//const is_ActiveTab = createSelector(activeTab, (a,b) => a === b)
 
 		const store: Store = {
 			activeTab,
 			set_ActiveTab,
-			is_ActiveTab: (id) => (id === activeTab()),
+			is_ActiveTab,
 		}
 
 		return store
