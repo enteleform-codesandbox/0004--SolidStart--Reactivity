@@ -1,0 +1,19 @@
+{
+  "name": "example-basic-ts",
+  "scripts": {
+    "start": "solid-start dev"
+  },
+  "type": "module",
+  "devDependencies": {
+    "solid-app-router": "0.2.1",
+    "solid-js": "1.3.5",
+    "solid-meta": "0.27.3",
+    "solid-start": "0.1.0-alpha.60",
+    "solid-start-node": "0.1.0-alpha.60",
+    "typescript": "4.5.5",
+    "undici": "4.13.0",
+    "vite": "2.7.13",
+    "vite-plugin-inspect": "0.3.13",
+		"sass": "1.49.7"
+  }
+}

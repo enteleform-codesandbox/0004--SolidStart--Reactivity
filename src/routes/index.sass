@@ -1,0 +1,75 @@
+:root
+	--Slate_1:  #050507
+	--Slate_2:  #1D2029
+	--Slate_3:  #363C49
+	--Slate_4:  #505768
+	--Slate_5:  #6B7285
+	--Slate_6:  #868DA0
+	--Slate_7:  #A2A8B9
+	--Slate_8:  #BEC3D1
+	--Slate_9:  #DBDFE7
+	--Slate_10: #F9FAFB
+
+body,
+html,
+main
+	margin: 0
+	width:  100%
+	height: 100%
+
+main
+	display:         flex
+	align-items:     center
+	justify-content: center
+	background:      var(--Slate_1)
+	color:           var(--Slate_5)
+
+*
+	font-family: monospace
+
+h1
+	font-size:   6rem
+	font-weight: normal
+
+
+.Tab_Container
+	--Padding:      0.5rem
+	--PanelWidth:   10rem
+	--PanelHeight:  10rem
+	--BorderRadius: 4px
+
+.Tab_List
+	display:        flex
+	flex-direction: row
+	width:          var(--PanelWidth)
+	gap:            var(--Padding   )
+	margin-bottom:  var(--Padding   )
+
+.Tab_Button
+	flex:          1
+	height:        2rem
+	background:    var(--Slate_3)
+	color:         var(--Slate_7)
+	border:        2px solid var(--Slate_4)
+	border-radius: var(--BorderRadius)
+	font-size:     1.2rem
+	font-weight:   bold
+	cursor:        pointer
+
+	&:hover
+		filter: brightness(1.25)
+	&:active
+		filter: brightness(1.5)
+	&:focus
+		outline: none
+
+.Tab_Panel
+	display:         flex
+	align-items:     center
+	justify-content: center
+	width:           var(--PanelWidth  )
+	height:          var(--PanelHeight )
+	background:      var(--Slate_4     )
+	color:           var(--Slate_8     )
+	border-radius:   var(--BorderRadius)
+
